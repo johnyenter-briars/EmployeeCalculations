@@ -12,7 +12,7 @@ int main()
             new Employee(2, 19),
             new Employee(3, 47),
             new Employee(4, 20),
-            new Employee(5, 28),
+            new Employee(5, 18),
             new Employee(6, 37),
             new Employee(7, 20),
             new Employee(8, 28),
@@ -22,20 +22,36 @@ int main()
 
     std::vector<Employee*> employeesUnderDrinkingAge;
 
-    //Add all the employees who are under age to the employeesUnderDrinkingAge vector
+    //Step 0: Add all the employees who are under age to the employeesUnderDrinkingAge vector
+    /*
+        Remember, you can loop through a vector using something like this:
+        for (auto e : <your vector here>) 
+        {
+            //Do somethign with e 
+        }
+    */
 
-    //1: How can you print out the count of the employees in one line? Hint - use the employeesUnderDrinkingAge vector
-    printf("Employees under drinking age: %zu\n", 0 /*Something here ;) */);
+    //Step 1: How can you print out the count of the employees in one line? Hint - use the employeesUnderDrinkingAge vector. There's a 'size()' method!
+    printf("The number of employees under drinking age: %zu\n", 0 /*Something here*/);
 
-    //2: Print out the id of oldest employee who is under drinking age. Hint - iterate through the employeesUnderDrinkingAge 
+    //Step 2: Print out the id of oldest employee who is under drinking age. Hint - iterate through the employeesUnderDrinkingAge. You may need to keep track of the Employee!
 
-    //3: Print out the id of the youngest employee who is NOT under drinking age. Hint - make a new vector!
+    Employee* oldestEmployee = nullptr;
+    //Loop throuth the employees who are under age. Keeping track of the oldestEmployee
 
-    //4: Calculate the sums of all the ages (use both the employeesUnderDrinkingAge and the new vector you made in #3)
+    printf("Thd id of the employee who is the oldest but still under drinking age: %u\n", 0 /*Something here : )*/);
 
-    //5: Don't forget to clean up your references! Otherwise you'll have a memory leak!
+    //Step 3: Print out the id of the youngest employee who is NOT under drinking age. Hint - make a new vector!
+    //Do something similar to steps 1 and 2!
+
+    printf("Thd id of the employee who is the youngest but over the drinking age: %u\n", 0 /*Something here : )*/);
+
+    //Step 4: Don't forget to clean up your references! Otherwise you'll have a memory leak!
 
     /*
+        Do something like this:
+        For all your vectors:
+
         for (auto e : <your vector here>) 
         {
             delete e;
